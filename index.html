@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <main>
+      <h1>Contact Us</h1>
+      <form action="" method="get">
+        <div class="names">
+          <div class="name__div flex__column">
+            <label for="first__name">First Name</label>
+            <input
+              type="text"
+              id="first__name"
+              name="first__name"
+              class="input__field"
+              required
+            />
+            <span class="error__msg"> This field is required </span>
+          </div>
+
+          <div class="name__div flex__column">
+            <label for="last__name">Last Name</label>
+            <input
+              type="text"
+              id="last__name"
+              name="last__name"
+              class="input__field"
+              required
+            />
+            <span class="error__msg"> This field is required </span>
+          </div>
+        </div>
+
+        <div class="email__div flex__column">
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            class="input__field"
+            required
+          />
+          <span class="error__msg"> Please enter a valid email address </span>
+        </div>
+
+        <fieldset class="flex__column">
+          <legend>Query Type</legend>
+          <label for="general__enquiry__radio">General Enquiry</label>
+          <input
+            type="radio"
+            id="general__enquiry__radio"
+            name="general__enquiry"
+            value="general__enquiry"
+          />
+          <label for="support__request__radio">General Enquiry</label>
+          <input
+            type="radio"
+            id="support__request__radio"
+            name="support__request"
+            value="support__request"
+          />
+          <span class="error__msg"> Please select a query type </span>
+        </fieldset>
+
+        <div class="textarea__div flex__column">
+          <label for="message">Message</label>
+          <textarea
+            name="message"
+            id="message"
+            class="input__field"
+            required
+          ></textarea>
+          <span class="error__msg"> This field is required </span>
+        </div>
+
+        <div class="checkbox__consent">
+          <input type="checkbox" id="consent" name="consent" required />
+          <label for="consent">I consent to being contacted by the team</label>
+          <span class="error__msg">
+            To submit this form, please consent to being contacted
+          </span>
+        </div>
+
+        <input type="submit" value="Submit" class="submit__btn" />
+      </form>
+    </main>
+    <!-- <img src="assets/images/icon-checkbox-check.svg" alt="check" />
+    <img src="assets/images/icon-radio-selected.svg" alt="radioselected" />
+    <img src="assets/images/icon-success-check.svg" alt="successcheck" /> -->
+  </body>
+</html>
