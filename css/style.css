@@ -19,6 +19,7 @@
 body {
   font-family: 'Karla', sans-serif;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -30,24 +31,128 @@ main {
   padding: 1rem;
   color: var(--GREY900DARKER);
   border-radius: 15px;
+  max-width: 700px;
+  width: 80%;
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.star {
+  color: var(--GREEN600MEDIUM);
+}
+
+/* SUCCESS MESSAGE */
+
+.success__message {
+  background-color: var(--GREY900DARKER);
+  color: var(--WHITE);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.success__header {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.success__head__p {
+  font-weight: 700;
+}
+
+.success__text {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
 }
 
 /* ERRORS */
 
 .error__msg {
   display: none;
+  color: var(--RED);
+  font-size: 0.8rem;
 }
 
 /* INPUTS */
 
+.div__margin {
+  margin-bottom: 1.5rem;
+}
+
 .input__field {
-  padding: 0.4rem;
-  border-radius: 10px;
+  padding: 0.9rem;
+  border-radius: 5px;
+  border: 1px solid var(--GREY500MEDIUM);
+  margin-top: 0.7rem;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  outline: none;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  accent-color: var(--GREEN600MEDIUM);
+  cursor: pointer;
+}
+
+.input__field:hover {
+  border: 1px solid var(--GREEN600MEDIUM);
+}
+
+.input__field:focus {
+  border: 1px solid var(--GREEN600MEDIUM);
 }
 
 .flex__column {
   display: flex;
   flex-direction: column;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.query__container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+fieldset legend {
+  margin-bottom: 0.7rem;
+}
+
+fieldset .radio__input {
+  border: 1px solid var(--GREY500MEDIUM);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+fieldset .radio__input:hover {
+  border: 1px solid var(--GREEN600MEDIUM);
+  background-color: var(--GREEN200LIGHT);
+}
+
+textarea {
+  height: 4rem;
 }
 
 /* SUBMIT BUTTON */
@@ -63,8 +168,24 @@ main {
   padding: 1rem;
   width: 100%;
   cursor: pointer;
+  margin-top: 2rem;
 }
 
 .submit__btn:hover {
   background-color: var(--DARKGREENHOVER);
+}
+@media (min-width: 670px) {
+  .names {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2rem;
+  }
+
+  .query__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2rem;
+  }
 }

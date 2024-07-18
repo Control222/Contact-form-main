@@ -20,15 +20,29 @@
       rel="stylesheet"
     />
 
+    <script src="main.js" defer></script>
+
     <title>Frontend Mentor | Contact form</title>
   </head>
   <body>
+    <!-- Submit success message -->
+    <div class="success__message hidden">
+      <div class="success__header">
+        <img src="assets/images/icon-success-check.svg" alt="success-icon" />
+        <p class="success__head__p">Message Sent!</p>
+      </div>
+      <p class="success__text">
+        Thanks for completing the form. We'll be in touch soon!
+      </p>
+    </div>
     <main>
       <h1>Contact Us</h1>
-      <form action="" method="get">
+      <form action="" method="get" novalidate>
         <div class="names">
-          <div class="name__div flex__column">
-            <label for="first__name">First Name</label>
+          <div class="name__div flex__column div__margin">
+            <label for="first__name"
+              >First Name <span class="star">*</span></label
+            >
             <input
               type="text"
               id="first__name"
@@ -39,8 +53,10 @@
             <span class="error__msg"> This field is required </span>
           </div>
 
-          <div class="name__div flex__column">
-            <label for="last__name">Last Name</label>
+          <div class="name__div flex__column div__margin">
+            <label for="last__name"
+              >Last Name <span class="star">*</span></label
+            >
             <input
               type="text"
               id="last__name"
@@ -52,8 +68,8 @@
           </div>
         </div>
 
-        <div class="email__div flex__column">
-          <label for="email">Email Address</label>
+        <div class="email__div flex__column div__margin">
+          <label for="email">Email Address <span class="star">*</span></label>
           <input
             type="email"
             id="email"
@@ -65,26 +81,34 @@
         </div>
 
         <fieldset class="flex__column">
-          <legend>Query Type</legend>
-          <label for="general__enquiry__radio">General Enquiry</label>
-          <input
-            type="radio"
-            id="general__enquiry__radio"
-            name="general__enquiry"
-            value="general__enquiry"
-          />
-          <label for="support__request__radio">General Enquiry</label>
-          <input
-            type="radio"
-            id="support__request__radio"
-            name="support__request"
-            value="support__request"
-          />
+          <legend>Query Type <span class="star">*</span></legend>
+          <div class="query__container">
+            <div class="radio__input">
+              <input
+                type="radio"
+                id="general__enquiry__radio"
+                name="query__type"
+                value="General Enquiry"
+              />
+              <label for="general__enquiry__radio">General Enquiry</label>
+            </div>
+
+            <div class="radio__input">
+              <input
+                type="radio"
+                id="support__request__radio"
+                name="query__type"
+                value="Support Request"
+              />
+              <label for="support__request__radio">General Enquiry</label>
+            </div>
+          </div>
+
           <span class="error__msg"> Please select a query type </span>
         </fieldset>
 
-        <div class="textarea__div flex__column">
-          <label for="message">Message</label>
+        <div class="textarea__div flex__column div__margin">
+          <label for="message">Message <span class="star">*</span></label>
           <textarea
             name="message"
             id="message"
@@ -96,7 +120,10 @@
 
         <div class="checkbox__consent">
           <input type="checkbox" id="consent" name="consent" required />
-          <label for="consent">I consent to being contacted by the team</label>
+          <label for="consent"
+            >I consent to being contacted by the team
+            <span class="star">*</span></label
+          >
           <span class="error__msg">
             To submit this form, please consent to being contacted
           </span>
@@ -105,8 +132,5 @@
         <input type="submit" value="Submit" class="submit__btn" />
       </form>
     </main>
-    <!-- <img src="assets/images/icon-checkbox-check.svg" alt="check" />
-    <img src="assets/images/icon-radio-selected.svg" alt="radioselected" />
-    <img src="assets/images/icon-success-check.svg" alt="successcheck" /> -->
   </body>
 </html>
